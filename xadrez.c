@@ -1,32 +1,52 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
-
 int main() {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
+    int escolha;
+    int casasTorre = 5;
+    int casasBispo = 5;
+    int casasRainha = 8;
+    int i;
+    int contadorBispo;
+    int contadorRainha;
 
-    // Implementação de Movimentação do Bispo
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
+    // Exibe o menu para o usuário
+    printf("Escolha uma peça para movimentar:\n");
+    printf("1 - Torre (5 casas para a Direita)\n");
+    printf("2 - Bispo (5 casas na Diagonal Cima Direita)\n");
+    printf("3 - Rainha (8 casas para a Esquerda)\n");
+    printf("Digite o número da sua escolha: ");
+    scanf("%d", &escolha);
 
-    // Implementação de Movimentação da Torre
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Torre para a direita.
-
-    // Implementação de Movimentação da Rainha
-    // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Rainha para a esquerda.
-
-    // Nível Aventureiro - Movimentação do Cavalo
-    // Sugestão: Utilize loops aninhados para simular a movimentação do Cavalo em L.
-    // Um loop pode representar a movimentação horizontal e outro vertical.
-
-    // Nível Mestre - Funções Recursivas e Loops Aninhados
-    // Sugestão: Substitua as movimentações das peças por funções recursivas.
-    // Exemplo: Crie uma função recursiva para o movimento do Bispo.
-
-    // Sugestão: Implemente a movimentação do Cavalo utilizando loops com variáveis múltiplas e condições avançadas.
-    // Inclua o uso de continue e break dentro dos loops.
+    if (escolha == 1) {
+        // Torre
+        printf("\nMovimento da Torre:\n");
+        for (i = 0; i < casasTorre; i++) {
+            printf("Direita\n");
+        }
+    } else {
+        if (escolha == 2) {
+            // Bispo
+            printf("\nMovimento do Bispo:\n");
+            contadorBispo = 0;
+            while (contadorBispo < casasBispo) {
+                printf("Cima Direita\n");
+                contadorBispo++;
+            }
+        } else {
+            if (escolha == 3) {
+                // Rainha
+                printf("\nMovimento da Rainha:\n");
+                contadorRainha = 0;
+                do {
+                    printf("Esquerda\n");
+                    contadorRainha++;
+                } while (contadorRainha < casasRainha);
+            } else {
+                // Opção inválida
+                printf("\nOpção inválida. Por favor, escolha 1, 2 ou 3.\n");
+            }
+        }
+    }
 
     return 0;
 }
