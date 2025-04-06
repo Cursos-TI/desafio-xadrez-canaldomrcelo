@@ -13,7 +13,7 @@ int main() {
     printf("Escolha uma peça para movimentar:\n");
     printf("1 - Torre (5 casas para a Direita)\n");
     printf("2 - Bispo (5 casas na Diagonal Cima Direita)\n");
-    printf("3 - Rainha (8 casas para a Esquerda)\n");
+    printf("3 - Rainha (8 casas para a Esquerda)\n"); 
     printf("Digite o número da sua escolha: ");
     scanf("%d", &escolha);
 
